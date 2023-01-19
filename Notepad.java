@@ -29,9 +29,6 @@
  import javax.swing.SwingWorker;
  import javax.swing.WindowConstants;
 
- // Student: Caolan Mac Mahon (C00222425)
- // References:
-// GeeksForGeeks: How to pad a string in Java https://www.geeksforgeeks.org/how-to-pad-a-string-in-java/
 @SuppressWarnings("serial")
 public class Notepad extends JFrame {
 
@@ -302,17 +299,17 @@ public class Notepad extends JFrame {
 
     private String addPadding(String plaintext){
         // add 20 spaces to the right, and then replaces the spaces with 'T' for padding
-        plaintext = String.format("%" + (-20) + 's', plaintext).replace(' ', 'T');
+        plaintext = String.format("%" + (-20) + 's', plaintext).replace(' ', '!');
 
         return plaintext;
     }
 
     private String checkForPadding(String plaintext){
         for(int i = plaintext.length()-1; i >= plaintext.length() - 20; i--){
-            if(plaintext.charAt(i) != 'T'){
+            if(plaintext.charAt(i) != '!'){
                 break;
             } else {
-                plaintext = plaintext.replace("T", " ");
+                plaintext = plaintext.replace("!", " ");
                 // trim trailing spaces
                 char[] temp = plaintext.toCharArray();
                 int len = plaintext.length();
