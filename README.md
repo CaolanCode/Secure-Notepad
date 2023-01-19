@@ -2,6 +2,8 @@
 
 A notepad with the below functionality:
 
-1. Create a file
-2. Save the file encrypted using AES from the Bouncy Castle library in Java
-3. Decrypt the file when opened with the application
+1. Creates a file
+2. Saves the file encrypted using AES from the Bouncy Castle library in Java
+3. Encrypts using a password
+4. Decrypts the file when opened with the application using the correct password
+5. If the password entered is incorrect, brute force attack the file using a password list provided
